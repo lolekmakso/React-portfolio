@@ -1,0 +1,20 @@
+.projects{
+    padding-bottom: 240px;
+
+    &__carusel{
+        padding: 12px;
+    }
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+
+    &__item{
+        img{
+            border-radius: 4px;
+        }
+    }
+}
+
