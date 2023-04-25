@@ -7,7 +7,7 @@ export default function Welcome() {
     <div className="container welcome">
       <div className="welcome__info">
         <div className="welcome__title">
-          Hi, I am Your Name A Product Designer based in City.
+          Hi, I am Maksym. A Product Designer based in City.
         </div>
         <div className="welcome__desc">
           I help businesses and companies reach their goals by designing

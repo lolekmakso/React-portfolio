@@ -65,13 +65,23 @@
     transition: $transition;
 
     a{
-        @include text($ff, 700, 40px, 55px, $lightgray);
+        @include text($ff, 700, 16px, 55px, $lightgray);
+        transition: $transition;
+
+        &:hover{
+          color: #fff;
+        }
+
     }
   }
 }
 
 .work__img:hover .work__litter{
     opacity: 1;
+}
+
+.work__img:hover .work__litter a{
+  font-size: 40px;
 }
 
 .work__img:hover:after{
