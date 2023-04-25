@@ -1,0 +1,79 @@
+@import "src/scss/mixins";
+@import "src/scss/vars";
+
+.work {
+  margin-bottom: 240px;
+
+  &__selection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  &__text {
+    padding-left: 24px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    @include text($ff, 700, 16px, 16px, $lightgray);
+  }
+
+  &__images {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__right-img {
+    margin-top: 138px;
+  }
+
+  &__left-img,
+  &__right-img {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__img {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img::after {
+    opacity: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $dark;
+    transition: $transition;
+  }
+
+  &__litter {
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: -0.5px;
+    transition: $transition;
+
+    a{
+        @include text($ff, 700, 40px, 55px, $lightgray);
+    }
+  }
+}
+
+.work__img:hover .work__litter{
+    opacity: 1;
+}
+
+.work__img:hover:after{
+    opacity: 1;
+}

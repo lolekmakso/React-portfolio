@@ -10,6 +10,7 @@ import { Carousel } from "react-responsive-carousel";
 import React from "react";
 import ReactDOM from "react-dom";
 import Modal from "react-modal";
+import MessageIcon from "../icons/MessageIcon";
 
 const customStyles = {
   content: {
@@ -21,7 +22,6 @@ const customStyles = {
     transform: "translate(-50%, -50%)",
   },
 };
-
 
 Modal.setAppElement("#root");
 
@@ -88,10 +88,19 @@ export default function Projects() {
         style={customStyles}
         contentLabel="Example Modal"
       >
-      
         <button onClick={closeModal}>close</button>
-        
       </Modal>
+
+      <div className="title projects__title">Contact Me</div>
+      <div className="projects__desc">
+        If you are looking to hire a product designer, I’m currently available
+        for freelance work
+      </div>
+      <a href="/" className="btn projects__btn">
+          <MessageIcon />
+          <span>hi@yourname.com</span>
+
+        </a>
     </div>
   );
 }

@@ -1,20 +1,45 @@
-.projects{
-    padding-bottom: 240px;
+@import "src/scss/mixins";
+@import "src/scss/vars";
 
-    &__carusel{
-        padding: 12px;
-    }
+.projects {
+  padding-bottom: 240px;
+
+  &__carusel {
+    padding: 12px;
+  }
+
+  &__title{
+    margin-top: 240px;
+    margin-bottom: 24px;
+  }
+
+  &__desc {
+    margin-bottom: 48px;
+    max-width: 521px;
+    margin-inline: auto;
+    text-align: center;
+    letter-spacing: -0.5px;
+    @include text($ff, 600, 26px, 38px, $text-gray);
+  }
+
+  &__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 293px;
+    margin-inline: auto;
+    
+  }
 }
 
-.project-list{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
 
-    &__item{
-        img{
-            border-radius: 4px;
-        }
+  &__item {
+    img {
+      border-radius: 4px;
     }
+  }
 }
-
